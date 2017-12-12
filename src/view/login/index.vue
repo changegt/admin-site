@@ -26,7 +26,13 @@
 				}
 			};
 		},
+		mounted (){
+			this.valiCookies();
+		},
 		methods: {
+			valiCookies (){
+				
+			},
 			doLogin () {
 				var _self = this;
 				_self.$store.dispatch('Login', _self.loginInfo).then(data => {
