@@ -35,8 +35,8 @@ const user = {
 						//说明当前的cookie是正确的
 						commit('SET_COOKIES', data.result.username);
 					}
-				})
-			})
+				});
+			});
 		},
 		Login ({commit}, userinfo) {
 			return new Promise((resolve, reject) => {
