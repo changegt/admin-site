@@ -21,7 +21,7 @@
 		data () {
 			return {
 				loginInfo: {
-					username: 'yyf',
+					username: 'admin',
 					password: '123456'
 				}
 			};

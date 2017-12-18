@@ -43,7 +43,9 @@ router.beforeEach((to, from, next) => {
 				if(data.errorCode === 0){
 					store.commit('SET_USERINFO', data.result);
 					store.commit('SET_Token', data.result.token);
-					next('/backstage');
+					next();
+				}else{
+					next('/login');		
 				}
 			});
 		}

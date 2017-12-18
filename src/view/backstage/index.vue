@@ -3,9 +3,11 @@
 		<!-- <el-header class="com_bg"></el-header> -->
 		<el-container>
 			<el-aside>
-			    <left></left>
+			    <left :activeindex="'0'"></left>
 			</el-aside>
-			<el-main>main</el-main>
+			<el-main>
+				hello1
+			</el-main>
 		</el-container>
 	</el-container>
 </template>
@@ -22,12 +24,7 @@
 				'avatar'
 			])
 		},
-		methods: {
-	      	handleOpen(key, keyPath) {
-	      	},
-	      	handleClose(key, keyPath) {
-	      	}
-	    },
+		methods: {},
 	    components: {
 	    	left
 	    }

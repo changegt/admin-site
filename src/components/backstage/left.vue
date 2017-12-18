@@ -1,6 +1,6 @@
 <template>
 	<el-menu
-		default-active="2"
+		:default-active="activeindex"
 		class="el-menu-vertical-demo"
 		@open="handleOpen"
 		@close="handleClose"
@@ -64,18 +64,18 @@
 					level: '学习',
 					icons: 'el-icon-location',
 					levelLists: [
-						{
-							id: 'level2-1',
-							level: 'vue',
-							icons: 'el-icon-location',
-							href : ''
-						},
-						{
-							id: 'level2-2',
-							level: 'nodejs',
-							icons: 'el-icon-menu',
-							href : ''
-						},
+						// {
+						// 	id: 'level2-1',
+						// 	level: 'vue',
+						// 	icons: 'el-icon-location',
+						// 	href : ''
+						// },
+						// {
+						// 	id: 'level2-2',
+						// 	level: 'nodejs',
+						// 	icons: 'el-icon-menu',
+						// 	href : ''
+						// },
 						{
 							id: 'level2-3',
 							level: 'zb',
@@ -97,12 +97,15 @@
 			];
 	export default {
 		name: 'left',
+		props: ['activeindex'],
 		data () {
+			console.log(this.activeindex);
 			return {
 				bar: arr
 			};
 		},
 		mounted () {
+			console.log(this.activeindex);
 		},
 		methods: {
 	      	handleOpen(key, keyPath) {

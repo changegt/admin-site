@@ -1,5 +1,5 @@
 //中币获取数据皆苦 
-import zbzpi from '@/api/zbzpi.js';
+import zbapi from '@/api/zbapi.js'
 const zb = {
 	state: {
 		
@@ -10,14 +10,17 @@ const zb = {
 
 	actions: {
 		getTrade ({commit}) {
-			return new Promise((resolve, reject) => {
-				zbapi.tradeAjax().then((json) => {
-					console.log(json);
-				});
-			});
+			// return new Promise((resolve, reject) => {
+			// 	zbapi.tradeAjax().then(data => {
+			// 		const returnData = eval('('+data+')');
+			// 		resolve(returnData);
+			// 	})
+			// });
+			return zbapi.tradeAjax();
 		}
 	}
 };
 
 export default zb;
+
 
